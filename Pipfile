@@ -1,0 +1,33 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[packages]
+prometheus-client = "==0.9.0"
+pydantic = "==1.8.2"
+black = "==20.8b1"
+mkdocs = "==1.2.2"
+mypy = "==0.910"
+
+[requires]
+python_version = "3.8"
+
+[scripts]
+app = "python ./app/main.py"
+test = "python -m pytest -s  --html-report=./tests/index.html"
+pep8 = "python -m flake8"
+isort = "python -m isort --sp pyproject.toml --skip .venv ."
+black = "python -m black ."
+check-isort = "python -m isort --sp pyproject.toml --skip .venv . --check"
+check-black = "python -m black --check ."
+check-flake8 = "python -m flake8 --exclude=.venv/"
+check-types = "python -m mypy app"
+coverage-run = "python -m coverage run --source=app -m pytest"
+coverage-report = "python -m coverage report -m --omit=.venv"
+build-docs="python -m mkdocs build --site-dir public"
+build-linter-report="python -m flake8 --format=html --htmldir=flake-report --exit-zero"
+build-coverage-report="python -m coverage html --directory=coverage --omit=.venv"
+
+[pipenv]
+allow_prereleases = true
