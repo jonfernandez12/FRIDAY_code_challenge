@@ -1,57 +1,7 @@
 # FRIDAY_code_challenge
 Code challenge for FRIDAY enterprise
 
-## Requisites
-
-- [pipenv](https://pypi.org/project/pipenv/)
-- If you are using Visual Studio Code, you need to install [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-## Start
-
-```bash
-make start
-```
-
-### Git Hooks
-
-* **Pre-commit**: before each commit the `make run-tests` command will be executed. 
-
-Note: If you want to ignore the pre-commit hook, add the flag `--no-verify` to the commit command.
-
-
-## Install dependencies
-
-```bash
-make install-deps
-```
-
-## Add/remove dependency
-
-```bash
-# Install dependency
-make install dep={{dependency}} ver={{dependency_version}} # Example: make install dep=requests ver=2.26.0
-make install-dev dep={{dependency}} ver={{dependency_version}} # Example: make install-dev dep=requests ver=2.26.0
-
-# Uninstall dependency
-make uninstall dep={{dependency}} # Example: make uninstall dep=requests
-```
-
-## Run
-
-```bash
-make run
-```
-
-## Run tests
-
-```bash
-make run-tests
-```
-
-## Format code
-
-```bash
-make format
-```
+# Get started
 
 # Modus operandi
 

@@ -1,0 +1,31 @@
+site_name: FRIDAY code challnge
+nav:
+  - Home: index.md
+  - Functional documentation: functional/index.md
+  - Technical documentation: technical/index.md
+  - Tests Report: tests/index.html
+  - Code Coverage Report: coverage/index.html
+  - Code Style Report: flake-report/index.html
+plugins:
+  - search
+  - mkdocstrings:
+  - with-pdf:
+      author: Jon Fernández Bedia
+      copyright: _ #change later
+      cover_logo: img/friday_icon.png
+      cover_title: FRIDAY code challnge
+      cover_subtitle: Street parserr
+use_directory_urls: false
+theme:
+  name: material
+  favicon: img/friday_icon.png
+  logo: img/friday_icon.png
+extra_css:
+  - stylesheets/extra.css
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.highlight
+  - footnotes
+  - pymdownx.details
+  - footnotes

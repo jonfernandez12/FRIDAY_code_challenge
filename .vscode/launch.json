@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run tests",
+      "type": "python",
+      "request": "launch",
+      "module": "pytest",
+      "args": [
+        "-s",
+        "--html-report=./tests/index.html"
+      ],
+      "envFile": "${workspaceFolder}/env/test.properties"
+    },
+    {
+      "name": "[LOCAL] Run main.py",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/app/main.py",
+      "console": "integratedTerminal",
+      "env": {
+        "LOG_LEVEL": "DEBUG",
+        "ENABLE_METRICS": "False",
+      }
+    }
+  ]
+}

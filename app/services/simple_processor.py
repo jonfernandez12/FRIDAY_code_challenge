@@ -1,16 +1,21 @@
 import json
-from ast import Str
 
 
-def simple_processor(concatenated_street: Str, test: json) -> json:
+def simple_processor(concatenated_streets: list) -> json:
 
     """
-    Function that reads simple concatenated street and
+    Function that reads simple concatenated street list and
     returns street name and number json object
     """
+    streets = []
+    for concatenated_street in concatenated_streets:
+        [streetname, housenumber] = concatenated_street.split()
+        streets.append(
+            {
+                "street": streetname,
+                "housenumber": housenumber
+            }
+        )
 
-    [street, housenumber] = concatenated_street.split()
-    x = {"street": street, "housenumber": housenumber}
-    complete_street = json.dumps(x)
-
-    print(complete_street == test)
+    json_streets = json.dumps(streets, ensure_ascii=False)
+    return json_streets
