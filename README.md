@@ -67,3 +67,9 @@ make check-format
 ```bash
 make check-types
 ```
+
+## Generate docs
+To access all proyect documentantion, open public>index.html with your favourite browser 
+```bash
+make docs
+```
