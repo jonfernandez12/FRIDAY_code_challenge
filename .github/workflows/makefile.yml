@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: Configure
-      run: ./.github/workflow/configure.sh
+      run: make set-up
       
     - name: Run tests
       run: make run-tests

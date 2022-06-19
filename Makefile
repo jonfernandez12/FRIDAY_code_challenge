@@ -1,5 +1,10 @@
 current-dir := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 SHELL = /bin/sh
+set-up:
+	@bash -c "apt-get update"
+	@bash -c "pip install pipenv==2018.11.26"
+	@bash -c "apt-get -y install gcc build-essential"
+	@bash -c "make install-deps"
 start: install-deps
 install-deps:
 	@if [ -z $(shell which pipenv) ]; then echo "ERROR: missing software required (pip install pipenv)" > /dev/stderr && exit 1; fi
@@ -30,4 +35,4 @@ docs:
 	@pipenv run build-coverage-report
 	@pipenv run build-linter-report
 	@pipenv run build-docs
-.PHONY: start install-deps install install-dev uninstall build deploy run run-tests format check-format check-types docs
+.PHONY: start install-deps install install-dev uninstall build deploy run run-tests format check-format check-types docs set-up
