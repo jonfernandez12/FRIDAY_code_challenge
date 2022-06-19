@@ -48,68 +48,75 @@ def complex_street_data_sample() -> list:
 
 def test_simple_processor(simple_street_data_sample):
     actual = json.loads(simple_processor(simple_street_data_sample))
-    expected = json.loads(json.dumps(
-        [
-            {"street": "Winterallee", "housenumber": "3"},
-            {"street": "Musterstrasse", "housenumber": "45"},
-            {"street": "Blaufeldweg", "housenumber": "123B"},
-        ],
-        ensure_ascii=False,
-    ))
+    expected = json.loads(
+        json.dumps(
+            [
+                {"street": "Winterallee", "housenumber": "3"},
+                {"street": "Musterstrasse", "housenumber": "45"},
+                {"street": "Blaufeldweg", "housenumber": "123B"},
+            ],
+            ensure_ascii=False,
+        )
+    )
     case.assertEqual(actual, expected)
 
 
 def test_middle_processor(middle_street_data_sample):
 
     actual = json.loads(middle_processor(middle_street_data_sample))
-    expected = json.loads(json.dumps(
-        [
-            {"street": "Winterallee", "housenumber": "3"},
-            {"street": "Musterstrasse", "housenumber": "45"},
-            {"street": "Blaufeldweg", "housenumber": "123B"},
-            {"street": "Am Bächle", "housenumber": "23"},
-            {"street": "Auf der Vogelwiese", "housenumber": "23 b"},
-        ],
-        ensure_ascii=False,
-    ))
+    expected = json.loads(
+        json.dumps(
+            [
+                {"street": "Winterallee", "housenumber": "3"},
+                {"street": "Musterstrasse", "housenumber": "45"},
+                {"street": "Blaufeldweg", "housenumber": "123B"},
+                {"street": "Am Bächle", "housenumber": "23"},
+                {"street": "Auf der Vogelwiese", "housenumber": "23 b"},
+            ],
+            ensure_ascii=False,
+        )
+    )
     case.assertEqual(actual, expected)
 
 
 def test_complex_processor(complex_street_data_sample):
     actual = json.loads(complex_processor(complex_street_data_sample))
 
-    expected = json.loads(json.dumps([
-        {"street": "Winterallee", "housenumber": "3"},
-        {"street": "Musterstrasse", "housenumber": "45"},
-        {"street": "Blaufeldweg", "housenumber": "123B"},
-        {"street": "Am Bächle", "housenumber": "23"},
-        {"street": "Auf der Vogelwiese", "housenumber": "23 b"},
-        {"street": "rue de la revolution", "housenumber": "4"},
-        {"street": "Broadway Av", "housenumber": "200"},
-        {"street": "Calle Aduana", "housenumber": "29"},
-        {"street": "Calle 39", "housenumber": "No 1540"},
-    ],
-        ensure_ascii=False,
-    ))
+    expected = json.loads(
+        json.dumps(
+            [
+                {"street": "Winterallee", "housenumber": "3"},
+                {"street": "Musterstrasse", "housenumber": "45"},
+                {"street": "Blaufeldweg", "housenumber": "123B"},
+                {"street": "Am Bächle", "housenumber": "23"},
+                {"street": "Auf der Vogelwiese", "housenumber": "23 b"},
+                {"street": "rue de la revolution", "housenumber": "4"},
+                {"street": "Broadway Av", "housenumber": "200"},
+                {"street": "Calle Aduana", "housenumber": "29"},
+                {"street": "Calle 39", "housenumber": "No 1540"},
+            ],
+            ensure_ascii=False,
+        )
+    )
     case.assertCountEqual(actual, expected)
 
 
 def test_complex_deeparse_processor(complex_street_data_sample):
-    actual = json.loads(
-        complex_deepparse_processor(complex_street_data_sample)
+    actual = json.loads(complex_deepparse_processor(complex_street_data_sample))
+    expected = json.loads(
+        json.dumps(
+            [
+                {"street": "Winterallee", "housenumber": "3"},
+                {"street": "Musterstrasse", "housenumber": "45"},
+                {"street": "Blaufeldweg", "housenumber": "123B"},
+                {"street": "Am Bächle", "housenumber": "23"},
+                {"street": "Auf der Vogelwiese", "housenumber": "23 b"},
+                {"street": "rue de la revolution", "housenumber": "4"},
+                {"street": "Broadway Av", "housenumber": "200"},
+                {"street": "Calle Aduana", "housenumber": "29"},
+                {"street": "Calle 39", "housenumber": "No 1540"},
+            ],
+            ensure_ascii=False,
+        )
     )
-    expected = json.loads(json.dumps(
-        [
-            {"street": "Winterallee", "housenumber": "3"},
-            {"street": "Musterstrasse", "housenumber": "45"},
-            {"street": "Blaufeldweg", "housenumber": "123B"},
-            {"street": "Am Bächle", "housenumber": "23"},
-            {"street": "Auf der Vogelwiese", "housenumber": "23 b"},
-            {"street": "rue de la revolution", "housenumber": "4"},
-            {"street": "Broadway Av", "housenumber": "200"},
-            {"street": "Calle Aduana", "housenumber": "29"},
-            {"street": "Calle 39", "housenumber": "No 1540"},
-        ],
-        ensure_ascii=False,
-    ))
     case.assertCountEqual(actual, expected)
