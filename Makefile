@@ -1,9 +1,9 @@
 current-dir := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 SHELL = /bin/sh
 set-up:
-	@bash -c "apt-get update"
-	@bash -c "pip install pipenv==2018.11.26"
-	@bash -c "apt-get -y install gcc build-essential"
+	@bash -c "sudo apt-get update"
+	@bash -c "sudo pip install pipenv==2018.11.26"
+	@bash -c "sudo apt-get -y install gcc build-essential"
 	@bash -c "make install-deps"
 start: install-deps
 install-deps:
