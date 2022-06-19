@@ -1,7 +1,7 @@
 stages:
-  # - test
-  # - check-format
-  # - check-types
+  - test
+  - check-format
+  - check-types
   - pages
 
 before_script:
@@ -9,23 +9,23 @@ before_script:
   - pip install pipenv==2018.11.26
   - make install-deps
 
-# test:
-#   stage: test
-#   image: python:3.8-slim
-#   script:
-#     - make run-tests
+test:
+  stage: test
+  image: python:3.8-slim
+  script:
+    - make run-tests
 
-# check-format:
-#   stage: check-format
-#   image: python:3.8-slim
-#   script:
-#     - make check-format
+check-format:
+  stage: check-format
+  image: python:3.8-slim
+  script:
+    - make check-format
 
-# check-types:
-#   stage: check-types
-#   image: python:3.8-slim
-#   script:
-#     - make check-types
+check-types:
+  stage: check-types
+  image: python:3.8-slim
+  script:
+    - make check-types
 
 pages:
   stage: pages
