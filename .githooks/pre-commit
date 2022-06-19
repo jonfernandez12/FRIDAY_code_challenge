@@ -1,3 +1,8 @@
+
+#!/bin/bash
+# set -euo pipefail
+# IFS=$'\n\t'
+
 echo "Running pre-commit hook"
 make run-tests
 
