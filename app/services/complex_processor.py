@@ -1,6 +1,5 @@
-import re
 import json
-from ast import Str
+import re
 
 
 def complex_processor(concatenated_streets: list) -> json:
@@ -22,14 +21,7 @@ def complex_processor(concatenated_streets: list) -> json:
 
         for index in range(1, len(ordered_street_array)):
             housenumber = housenumber + ordered_street_array[index]
-        
-        streetname = ordered_street_array[0]
-        streets.append(
-            {
-                "street": streetname, 
-                "housenumber": housenumber
-            }
-        )
-
+        streetname = ordered_street_array[0].replace(",", "").strip()
+        streets.append({"street": streetname, "housenumber": housenumber})
     json_streets = json.dumps(streets, ensure_ascii=False)
     return json_streets

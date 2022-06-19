@@ -1,7 +1,7 @@
 site_name: FRIDAY code challnge
 nav:
   - Home: index.md
-  - Functional documentation: functional/index.md
+  - Statement: statement/index.md
   - Technical documentation: technical/index.md
   - Tests Report: tests/index.html
   - Code Coverage Report: coverage/index.html
@@ -14,7 +14,7 @@ plugins:
       copyright: _ #change later
       cover_logo: img/friday_icon.png
       cover_title: FRIDAY code challnge
-      cover_subtitle: Street parserr
+      cover_subtitle: Street Address Automatic Parser
 use_directory_urls: false
 theme:
   name: material

@@ -500,7 +500,7 @@
                           <div style="margin-bottom: -6%; margin-left: 40%;">
                             <span style="color: darkgray; font-size: 17px;">
                                 <i class="fa fa-clock-o" style="color:currentcolor; margin: 2% 2% 0% 29%; font-size: 25px;"></i>
-                                    Time taken 7.44 secs
+                                    Time taken 4.25 secs
                             </span>
                           </div>
                           <div>
@@ -510,7 +510,7 @@
                                 </div>
                               </div>
                               <div class="card__header">
-                                <span class="header__date">June 18, 2022</span>
+                                <span class="header__date">June 19, 2022</span>
                               </div>
                               <div style="display: flex;">
                                 <span class="total__count">4</span>
@@ -691,11 +691,11 @@
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">test_complex_processor</td>
                 <td>FAIL</td>
                 <td>0</td>
-                <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">   assert '[{"street": ...": "Calle "}]' == '[{"street": ...: "No 1540"}]'
-     - [{"street": "Winterallee", "housenumber": "3"}, {"street": "Musterstrasse", "housenumber": "45"}, {"street": "Blaufeldweg", "housenumber": "123B"}, {"street": "Am Bächle", "housenumber": "23"}, {"street": "Auf der Vogelwiese", "housenumber": "23 b"}, {"street": "rue de la revolution", "housenumber": "4"}, {"street": "Broadway Av", "housenumber": "200"}, {"street": "Calle Aduana", "housenumber": "29"}, {"street": "Calle 39", "housenumber": "No 1540"}]
-     + [{"street": "Winterallee ", "housenumber": "3"}, {"street": "Musterstrasse ", "housenumber": "45"}, {"street": "Blaufe...
-     
-     ...Full output truncated (1 line hidden), use '-vv' to show
+                <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">   AssertionError: Element counts were not equal:
+   First has 1, Second has 0:  {'street': 'Auf der Vogelwiese', 'housenumber': '23b'}
+   First has 1, Second has 0:  {'street': '39 No 1540', 'housenumber': 'Calle '}
+   First has 0, Second has 1:  {'street': 'Auf der Vogelwiese', 'housenumber': '23 b'}
+   First has 0, Second has 1:  {'street': 'Calle 39', 'housenumber': 'No 1540'}
 </td>
             </tr>
         
@@ -704,11 +704,21 @@
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">test_complex_deeparse_processor</td>
                 <td>FAIL</td>
                 <td>0</td>
-                <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">   assert '[{"street": ...mber": "39"}]' == '[{"street": ...: "No 1540"}]'
-     - [{"street": "Winterallee", "housenumber": "3"}, {"street": "Musterstrasse", "housenumber": "45"}, {"street": "Blaufeldweg", "housenumber": "123B"}, {"street": "Am Bächle", "housenumber": "23"}, {"street": "Auf der Vogelwiese", "housenumber": "23 b"}, {"street": "rue de la revolution", "housenumber": "4"}, {"street": "Broadway Av", "housenumber": "200"}, {"street": "Calle Aduana", "housenumber": "29"}, {"street": "Calle 39", "housenumber": "No 1540"}]
-     + [{"street": "winterallee", "housenumber": "3"}, {"street": "musterstrasse", "housenumber": "45"}, {"street": "blaufeld...
-     
-     ...Full output truncated (1 line hidden), use '-vv' to show
+                <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">   AssertionError: Element counts were not equal:
+   First has 1, Second has 0:  {'street': 'Blaufeldweg', 'housenumber': '123b'}
+   First has 1, Second has 0:  {'street': 'Am bächle', 'housenumber': '23'}
+   First has 1, Second has 0:  {'street': 'Auf der vogelwiese', 'housenumber': '23 b'}
+   First has 1, Second has 0:  {'street': 'Rue de la', 'housenumber': '4'}
+   First has 1, Second has 0:  {'street': 'Broadway av', 'housenumber': '200'}
+   First has 1, Second has 0:  {'street': 'Calle aduana', 'housenumber': '29'}
+   First has 1, Second has 0:  {'street': 'Calle', 'housenumber': '39'}
+   First has 0, Second has 1:  {'street': 'Blaufeldweg', 'housenumber': '123B'}
+   First has 0, Second has 1:  {'street': 'Am Bächle', 'housenumber': '23'}
+   First has 0, Second has 1:  {'street': 'Auf der Vogelwiese', 'housenumber': '23 b'}
+   First has 0, Second has 1:  {'street': 'rue de la revolution', 'housenumber': '4'}
+   First has 0, Second has 1:  {'street': 'Broadway Av', 'housenumber': '200'}
+   First has 0, Second has 1:  {'street': 'Calle Aduana', 'housenumber': '29'}
+   First has 0, Second has 1:  {'street': 'Calle 39', 'housenumber': 'No 1540'}
 </td>
             </tr>
         
@@ -724,7 +734,7 @@
                     <a class ="list-group-item list-group-item-action" href="#list-item-1" style="font-size: 1.1rem; color: dimgray; margin-bottom: -7%;">
                         <i class="fa fa-times" aria-hidden="true" style="color: #fc6766"></i>
                         <span>build #1</span></br>
-                        <span style="font-size: 0.81rem; color: gray; padding-left: 12%;">2022-06-18 | 12:23 am</span>
+                        <span style="font-size: 0.81rem; color: gray; padding-left: 12%;">2022-06-19 | 3:50 pm</span>
                     </a>
                     
             </div>
@@ -738,7 +748,7 @@
                             </h4>
                             <div class="archive-date">
                                 <i class="fa fa-calendar-check-o" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
-                                JUNE 18, 2022
+                                JUNE 19, 2022
                             </div>
                         </div>
                         <div style="margin-top: -5%;">
@@ -1288,7 +1298,7 @@
             var trends = new Chart(lineCanvas, {
                 type: 'line',
                 data: {
-                  labels : ['12:23 AM | Jun 18'],
+                  labels : ['3:50 PM | Jun 19'],
                   datasets : [
                     {
                       label: 'Passed',

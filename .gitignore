@@ -1,3 +1,4 @@
-archive/*
+docs/tests/archive/*
+archive/
 output.json
 complex_processor.cpython-39.pyc

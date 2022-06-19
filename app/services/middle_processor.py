@@ -1,6 +1,5 @@
-import re
 import json
-from ast import Str
+import re
 
 
 def middle_processor(concatenated_streets: list) -> json:
@@ -11,13 +10,15 @@ def middle_processor(concatenated_streets: list) -> json:
     """
     streets = []
     for concatenated_street in concatenated_streets:
-        street = re.findall("([a-zA-Z \u0080-\uFFFF]*)\d*.*", concatenated_street)
+        street = re.findall(
+            "([a-zA-Z \u0080-\uFFFF]*)\d*.*", concatenated_street
+        )
         housenumber = concatenated_street.split(street[0], 1)
 
         streets.append(
             {
                 "street": street[0].strip(),
-                "housenumber": housenumber[1].strip()
+                "housenumber": housenumber[1].strip(),
             }
         )
 

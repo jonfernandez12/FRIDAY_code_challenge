@@ -1,6 +1,6 @@
 #https://black.readthedocs.io/en/stable/guides/using_black_with_other_tools.html?highlight=multi_line_output#custom-configuration
 [tool.black]
-line-length = 99
+line-length = 79
 exclude = '''
 /(
     \.git

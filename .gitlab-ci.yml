@@ -1,46 +1,43 @@
 stages:
-  - test
+  # - test
   # - check-format
   # - check-types
-  # - pages
+  - pages
 
 before_script:
   - apt-get update
-  - apt-get -y install gcc build-essential
   - pip install pipenv==2018.11.26
   - make install-deps
 
-test:
-  stage: test
-  image: python:3.8-slim
-  script:
-    - make run-tests
+# test:
+#   stage: test
+#   image: python:3.8-slim
+#   script:
+#     - make run-tests
 
-check-format:
-  stage: check-format
-  image: python:3.8-slim
-  script:
-    - make check-format
+# check-format:
+#   stage: check-format
+#   image: python:3.8-slim
+#   script:
+#     - make check-format
 
-check-types:
-  stage: check-types
-  image: python:3.8-slim
-  script:
-    - make check-types
+# check-types:
+#   stage: check-types
+#   image: python:3.8-slim
+#   script:
+#     - make check-types
 
 pages:
   stage: pages
   image: python:3.8-slim
-  allow_failure: true
+  allow_failure: false
   script:
-    - pipenv run build-linter-report
-    - pipenv run build-docs
-    - mv flake-report public/
     - make run-tests
-    - mv tests public/
-    # - pipenv run coverage-run
-    # - pipenv run build-coverage-report
-    # - mv coverage public/
+    - make docs
+    - mv doc/tests/ public/
+    - pipenv run coverage-run
+    - mv coverage public/
+    - mv flake-report public/
   artifacts:
     paths:
       - public
