@@ -7,22 +7,14 @@ on:
     branches: [ "main" ]
 
 jobs:
-  configre:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v3
-
-    - name: Configure
-      run: make set-up
-      
   run-tests:
 
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
+    - name: Configure
+      run: make set-up
 
     - name: Run tests
       run: make run-tests
@@ -33,7 +25,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    
+    - name: Configure
+      run: make set-up
     - name: Generate docs
       run:  make docs && mv coverage docs/ && mv flake-report docs/
       
