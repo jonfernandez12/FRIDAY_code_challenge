@@ -34,10 +34,9 @@ pages:
   script:
     - make run-tests
     - make docs
-    - mv doc/tests/ public/
     - pipenv run coverage-run
-    - mv coverage public/
-    - mv flake-report public/
+    - mv coverage docs/
+    - mv flake-report docs/
   artifacts:
     paths:
       - public

@@ -26,6 +26,7 @@ check-format:
 check-types:
 	@pipenv run check-types
 docs:
+	@pipenv run coverage-run
 	@pipenv run build-coverage-report
 	@pipenv run build-linter-report
 	@pipenv run build-docs
