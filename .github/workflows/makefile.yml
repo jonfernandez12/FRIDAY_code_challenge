@@ -13,9 +13,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+
+    - name: Configure
+      run: ./configure.sh
       
     - name: Run tests
-      run: pipenv run test
+      run: cd ../.../ && make run tests
       
     - name: Generate docs
       run:  cd ../../ && make docs && mv coverage docs/ && mv flake-report docs/
