@@ -19,14 +19,14 @@ jobs:
   #   - name: Run tests
   #     run: make run-tests
 
-  # docs:
+  docs:
 
-  #   runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-  #   steps:
-  #   - uses: actions/checkout@v3
-  #   - name: Configure
-  #     run: make set-up
-  #   - name: Generate docs
-  #     run:  make docs && mv coverage public/ && mv flake-report public/
+    steps:
+    - uses: actions/checkout@v3
+    - name: Configure
+      run: make set-up
+    - name: Generate docs
+      run:  make docs && mv coverage public/ && mv flake-report public/
       
