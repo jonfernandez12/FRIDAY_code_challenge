@@ -27,9 +27,11 @@ make install-deps
 ## Add/remove dependency
 
 ```bash
+# Install dependency
 make install dep={{dependency}} ver={{dependency_version}} # Example: make install dep=requests ver=2.26.0
 make install-dev dep={{dependency}} ver={{dependency_version}} # Example: make install-dev dep=requests ver=2.26.0
 
+# Uninstall dependency
 make uninstall dep={{dependency}} # Example: make uninstall dep=requests
 ```
 
@@ -64,4 +66,11 @@ make check-format
 ## Check types
 ```bash
 make check-types
+```
+
+## Generate docs
+To access all project documentation, open public>index.html with your favorite browser . Also it can be accessed via 
+https://jonfernandez12.github.io/FRIDAY_code_challenge/public/
+```bash
+make docs
 ```
