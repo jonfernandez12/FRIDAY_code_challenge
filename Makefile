@@ -34,5 +34,5 @@ docs:
 	@pipenv run build-coverage-report
 	@pipenv run build-linter-report
 	@pipenv run build-docs
-	@bash -c "mv coverage public/ && mv flake-report public/"
+	@bash -c "mv htmlcov public/ && mv flake-report public/"
 .PHONY: start install-deps install install-dev uninstall build deploy run run-tests format check-format check-types docs set-up

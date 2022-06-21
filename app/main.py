@@ -13,6 +13,9 @@ formatted json objects using different processors.
 
 
 def init_validator() -> Validator:
+    """
+    Validator initialization function, returns validator.
+    """
     logger.info("Creating data validator, please wait...")
     try:
         validator = Validator()
@@ -25,6 +28,9 @@ def init_validator() -> Validator:
 
 
 def init_processor() -> Processor:
+    """
+    Processor initialization function, returns processor.
+    """
     logger.info("Creating data processor, please wait...")
     try:
         processor = Processor()
@@ -37,6 +43,9 @@ def init_processor() -> Processor:
 
 
 def init_repository() -> Repository:
+    """
+    Repository initialization function, returns repository.
+    """
     logger.info("Accessing data with the repository, please wait...")
     try:
         repository = Repository()
@@ -51,6 +60,10 @@ def init_repository() -> Repository:
 
 
 def get_public_methods_from_processor(processor: Processor) -> list:
+    """
+    Function that takes processor instance and
+    returns all processor methods.
+    """
     public_method_names = [
         method
         for method in dir(processor)
@@ -63,6 +76,11 @@ def get_public_methods_from_processor(processor: Processor) -> list:
 def call_all_processors(
     public_method_names: list, processor: Processor, repository: Repository
 ) -> list:
+    """
+    Function that takes processor instance, repository instance and
+    all public methods name from processor instance and
+    returns a list of dicts formed by method and processed street data.
+    """
     processed_data = []
     for method in public_method_names:
         processed_data.append(
@@ -77,7 +95,12 @@ def call_all_processors(
     return processed_data
 
 
-def validate_data(processed_data: list):
+def validate_data(processed_data: list) -> None:
+    """
+    Function that takes processed data, then validates processed data and logs
+    which accuracy has had each method when processing data and which streets
+    has properly processed.
+    """
     for processed in processed_data:
 
         method = str(processed["method"]).capitalize().replace("_", " ")

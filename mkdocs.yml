@@ -4,7 +4,7 @@ nav:
   - Statement: statement/index.md
   - Technical documentation: technical/index.md
   - Tests Report: tests/index.html
-  - Code Coverage Report: coverage/index.html
+  - Code Coverage Report: htmlcov/index.html
   - Code Style Report: flake-report/index.html
 plugins:
   - search
