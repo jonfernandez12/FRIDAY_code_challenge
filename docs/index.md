@@ -1,5 +1,6 @@
 # FRIDAY_code_challenge
-Code challenge for FRIDAY enterprise
+Code challenge for FRIDAY, German branch of FRIDAY Insurance S.A.
+Jon Fernández Bedia
 
 ## Requisites
 
