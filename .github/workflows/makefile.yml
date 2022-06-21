@@ -27,6 +27,14 @@ jobs:
     - uses: actions/checkout@v3
     - name: Configure
       run: make set-up
-    - name: Generate docs
-      run:  make docs && mv coverage public/ && mv flake-report public/
+    - name: Generate docs 1
+      run:  pipenv run build-coverage-report 
+    - name: Generate docs 2
+      run:  pipenv run build-linter-report
+    - name: Generate docs 3
+      run: pipenv run build-docs
+    - name: Move coverage
+      run:  mv coverage public/
+    - name: Move flake8
+      run:  mv flake-report public/
       

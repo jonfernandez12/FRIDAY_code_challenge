@@ -69,7 +69,8 @@ make check-types
 ```
 
 ## Generate docs
-To access all proyect documentantion, open public>index.html with your favourite browser 
+To access all project documentation, open public>index.html with your favorite browser . Also it can be accessed via 
+https://jonfernandez12.github.io/FRIDAY_code_challenge/public/
 ```bash
 make docs
 ```
