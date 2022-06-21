@@ -16,10 +16,16 @@ jobs:
     - name: Configure
       run: make set-up
     - name: Generate docs 1
-      run:  pipenv run build-coverage-report 
+      run:  ls 
     - name: Generate docs 2
-      run:  pipenv run build-linter-report
+      run:  pipenv run coverage-run 
     - name: Generate docs 3
+      run:  pipenv run coverage-report
+    - name: Generate docs 4
+      run:  pipenv run build-coverage-report 
+    - name: Generate docs 5
+      run:  pipenv run build-linter-report
+    - name: Generate docs 6
       run: pipenv run build-docs
     - name: Move coverage
       run:  mv htmlcov public/
