@@ -3,13 +3,16 @@ import unittest
 
 import pytest
 
-from app.services.complex_deepparse_processor import complex_deepparse_processor
-from app.services.complex_processor import complex_processor
-from app.services.middle_processor import middle_processor
-from app.services.simple_processor import simple_processor
+from app.services.processor import Processor
 
 case = unittest.TestCase()
 case.maxDiff = None
+
+
+@pytest.fixture
+def init_processor() -> Processor:
+    processor = Processor()
+    return processor
 
 
 @pytest.fixture
@@ -46,8 +49,10 @@ def complex_street_data_sample() -> list:
     ]
 
 
-def test_simple_processor(simple_street_data_sample):
-    actual = json.loads(simple_processor(simple_street_data_sample))
+def test_simple_processor(init_processor, simple_street_data_sample):
+    actual = json.loads(
+        Processor.simple_processor(init_processor, simple_street_data_sample)
+    )
     expected = json.loads(
         json.dumps(
             [
@@ -61,9 +66,10 @@ def test_simple_processor(simple_street_data_sample):
     case.assertEqual(actual, expected)
 
 
-def test_middle_processor(middle_street_data_sample):
-
-    actual = json.loads(middle_processor(middle_street_data_sample))
+def test_middle_processor(init_processor, middle_street_data_sample):
+    actual = json.loads(
+        Processor.middle_processor(init_processor, middle_street_data_sample)
+    )
     expected = json.loads(
         json.dumps(
             [
@@ -79,8 +85,10 @@ def test_middle_processor(middle_street_data_sample):
     case.assertEqual(actual, expected)
 
 
-def test_complex_processor(complex_street_data_sample):
-    actual = json.loads(complex_processor(complex_street_data_sample))
+def test_complex_processor(init_processor, complex_street_data_sample):
+    actual = json.loads(
+        Processor.complex_processor(init_processor, complex_street_data_sample)
+    )
 
     expected = json.loads(
         json.dumps(
@@ -101,8 +109,12 @@ def test_complex_processor(complex_street_data_sample):
     case.assertCountEqual(actual, expected)
 
 
-def test_complex_deeparse_processor(complex_street_data_sample):
-    actual = json.loads(complex_deepparse_processor(complex_street_data_sample))
+def test_complex_deeparse_processor(init_processor, complex_street_data_sample):
+    actual = json.loads(
+        Processor.complex_deepparse_processor(
+            init_processor, complex_street_data_sample
+        )
+    )
     expected = json.loads(
         json.dumps(
             [

@@ -30,18 +30,18 @@ python_version = "3.8"
 [scripts]
 app = "python ./app/main.py"
 test = "python -m pytest app/services/tests/test.py -vv --html-report=./docs/tests/index.html"
-pep8 = "python -m flake8 --ignore=W605,E501"
+pep8 = "python -m flake8 --ignore=W605,E501,W503"
 isort = "python -m isort --sp pyproject.toml --skip .venv ."
 black = "python -m black ."
 check-isort = "python -m isort --sp pyproject.toml --skip .venv . --check"
 check-black = "python -m black --check ."
-check-flake8 = "python -m flake8 --exclude=.venv/ --ignore=W605,E501"
+check-flake8 = "python -m flake8 --exclude=.venv/ --ignore=W605,E501,W503"
 check-types = "python -m mypy app"
 coverage-run = "python -m coverage run --source=app -m  pytest app/services/tests/test.py -vv --html-report=./docs/tests/index.html"
-coverage-report = "python -m coverage report --source=app -m  pytest app/services/tests/test.py -vv --omit=.venv"
+coverage-report = "python -m coverage report -m --omit=.venv"
 build-docs = "python -m mkdocs build --site-dir public"
-build-linter-report = "python -m flake8 --exclude=.venv/ --ignore=W605,E501 --format=html --htmldir=flake-report --exit-zero"
-build-coverage-report = "python -m coverage html -i --directory=coverage --omit=.venv"
+build-linter-report = "python -m flake8 --exclude=.venv/ --ignore=W605,E501,W503 --format=html --htmldir=flake-report --exit-zero"
+build-coverage-report = "python -m coverage html --omit=.venv"
 
 [pipenv]
 allow_prereleases = true

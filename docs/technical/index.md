@@ -1,5 +1,6 @@
 # Modus operandi
 
+[2022-06-16]
 1. Read statement
 
 2. Free thinking: 
@@ -14,23 +15,26 @@
     ![Regex Example](regex_example.png)
     - Need to try to understand how does regex exactly works and adapt to my needs.
 
-4. We found a good regex that works 7/9 of the times (all streets but Calle 39 No 1540) , we are going to try another kind of process to parse streets.
+[2022-06-17]
+4. We found a good regex that works 7/9 of the times (all streets but "4, rue de la revolution" and "Calle 39 No 1540") , we are going to try another kind of process to parse streets.
 ```
 "^(\b\D+\b)?\s*(\b.*?\d.*?\b)\s*(\b\D+\b)?$"
 ```
 
-5. We achieve to parse the last street using:
-```
-(.*?)\s*(\d+(?:[/-]\d+)?)?$
-```
-
 5. We found an [state-of-the-art library for parsing multinational street addresses using deep learning](https://github.com/GRAAL-Research/deepparse), let's see how it works.
 
+[2022-06-19]
 6. We read again the challenge statement and as we where blocked with 8/9 parsed streets, we decide to start using TDD and use as many python best practices as we can, incorporating the following concepts:
 - Start developing following TDD, this is, start using automated unit tests to drive the development of our code.
 - Add code formatting frameworks such as Black, Flake8 and Isort and automatizing code format checks whenever a commit was done.
 - Add Makefile so it simplifies code running, testing and formatting no matter what IDE is being used.
 - Add docs folder and organizing better documentation. Also adding testing and coverage reports into the documentation.
+
+
+[2022-06-21]
+7.  Understand how Actions in github work, trying to automate the execution of all docs an leave  them in public/ folder.
+8. Thinking about how to organize project. (from functions to classes and main execution)
+9. Add  json validation
 
 # Faced problems
 ## Multiple SSH keys on same machine
@@ -121,7 +125,7 @@ pip3 install pipenv
  ```
  ./app/services/middle_processor.py:14:39: W605 invalid escape sequence '\d'
  ```
- It seems that Python 3 interprets string literals as Unicode strings, and therefore our \d is treated as an escaped Unicode character. As we are following [Flake8 rules regarding W605](https://www.flake8rules.com/rules/W605.html) to avoid the warning we add --ignore flag when checking flake8 format:
+ It seems that Python 3 interprets string literals as Unicode strings, and therefore our \d is treated as an escaped Unicode character. As we are following [Flake8 rules regarding W605](https://www.flake8rules.com/rules/W605.html)  and [Flake8 rules regarding W503](https://www.flake8rules.com/rules/W503.html) to avoid the warning we add --ignore flag when checking flake8 format:
 
  ```
 check-flake8 = "python -m flake8 --exclude=.venv/ --ignore=W605"
