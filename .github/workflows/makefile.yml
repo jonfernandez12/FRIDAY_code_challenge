@@ -22,7 +22,7 @@ jobs:
     - name: Generate docs 3
       run: pipenv run build-docs
     - name: Move coverage
-      run:  mv coverage public/
+      run:  mv htmlcov public/
     - name: Move flake8
       run:  mv flake-report public/
       

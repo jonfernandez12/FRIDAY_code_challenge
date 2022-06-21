@@ -41,7 +41,7 @@ coverage-run = "python -m coverage run --source=app -m  pytest app/services/test
 coverage-report = "python -m coverage report -m --omit=.venv"
 build-docs = "python -m mkdocs build --site-dir public"
 build-linter-report = "python -m flake8 --exclude=.venv/ --ignore=W605,E501,W503 --format=html --htmldir=flake-report --exit-zero"
-build-coverage-report = "python -m coverage html --omit=.venv"
+build-coverage-report = "python -m coverage html -i --omit=.venv"
 
 [pipenv]
 allow_prereleases = true
