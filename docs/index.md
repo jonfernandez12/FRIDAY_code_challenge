@@ -1,5 +1,6 @@
 # FRIDAY_code_challenge
 Code challenge for FRIDAY, German branch of FRIDAY Insurance S.A.
+To access project documentation go to https://jonfernandez12.github.io/FRIDAY_code_challenge/public/.
 Jon Fernández Bedia
 
 ## Requisites
@@ -38,7 +39,8 @@ make uninstall dep={{dependency}} # Example: make uninstall dep=requests
 
 ## Run
 
-Runs main application, located in app/main.py .
+Runs main application, located in app/main.py.
+
 ```bash
 make run
 ```
@@ -46,13 +48,14 @@ make run
 ## Run tests
 
 Run all tests defined in app/services/tests/test.py.
+
 ```bash
 make run-tests
 ```
 
 ## Format code
 
-Orders dependencies with isort and formats the code using the requirementes defined on pyproject.toml.
+Orders dependencies with Isort and formats the code using Black.
 
 ```bash
 make format
@@ -60,18 +63,24 @@ make format
 
 ## Check format
 
+Checks code format based on Isort, Black and Flake8 requirements.
+
 ```bash
 make check-format
 ```
 
 ## Check types
+
+Checks if all types are well typed.
+
 ```bash
 make check-types
 ```
 
 ## Generate docs
-To access all project documentation, open public>index.html with your favorite browser . Also it can be accessed via 
-https://jonfernandez12.github.io/FRIDAY_code_challenge/public/
+
+Generate all documentation in HTML format and leaves it in public/index.html, open with your favorite browser.
+
 ```bash
 make docs
 ```

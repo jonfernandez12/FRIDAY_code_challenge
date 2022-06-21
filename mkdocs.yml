@@ -3,6 +3,9 @@ nav:
   - Home: index.md
   - Statement: statement/index.md
   - Technical documentation: technical/index.md
+  - Modus operandi: technical/modus_operandi.md
+  - Faced problems: technical/faced_problems.md
+  -  Future implementations: technical/future_implementation.md
   - Tests Report: tests/index.html
   - Code Coverage Report: htmlcov/index.html
   - Code Style Report: flake-report/index.html

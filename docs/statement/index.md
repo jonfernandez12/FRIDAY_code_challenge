@@ -1,8 +1,5 @@
 # CODE CHALLENGE
 
-We kindly ask you to solve the following code challenge as part of our selection process.
-
-
 ## Addressline
 
 An address provider returns addresses only with concatenated street names and numbers. Our own system on the other hand has separate fields for street name and street number.
