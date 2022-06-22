@@ -11,7 +11,7 @@ Jon Fernández Bedia
 - If you are using Visual Studio Code, you need to install [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 ## Start
 
-```bash
+```
 make start
 ```
 
@@ -24,13 +24,13 @@ Note: If you want to ignore the pre-commit hook, add the flag `--no-verify` to t
 
 ## Install dependencies
 
-```bash
+```
 make install-deps
 ```
 
 ## Add/remove dependency
 
-```bash
+```
 # Install dependency
 make install dep={{dependency}} ver={{dependency_version}} # Example: make install dep=requests ver=2.26.0
 make install-dev dep={{dependency}} ver={{dependency_version}} # Example: make install-dev dep=requests ver=2.26.0
@@ -43,7 +43,7 @@ make uninstall dep={{dependency}} # Example: make uninstall dep=requests
 
 Runs main application, located in app/main.py.
 
-```bash
+```
 make run
 ```
 
@@ -51,7 +51,7 @@ make run
 
 Run all tests defined in app/services/tests/test.py.
 
-```bash
+```
 make run-tests
 ```
 
@@ -59,7 +59,7 @@ make run-tests
 
 Orders dependencies with Isort and formats the code using Black.
 
-```bash
+```
 make format
 ```
 
@@ -67,7 +67,7 @@ make format
 
 Checks code format based on Isort, Black and Flake8 requirements.
 
-```bash
+```
 make check-format
 ```
 
@@ -75,7 +75,7 @@ make check-format
 
 Checks if all types are well typed.
 
-```bash
+```
 make check-types
 ```
 
@@ -83,6 +83,6 @@ make check-types
 
 Generate all documentation in HTML format and leaves it in public/index.html, open with your favorite browser.
 
-```bash
+```
 make docs
 ```

@@ -158,7 +158,7 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="future_implementation.md">
+<a class="md-nav__link" href="future_implementations.html">
         Future implementations
       </a>
 </li>
@@ -293,11 +293,11 @@ File "/usr/lib/python3.8/shlex.py", line 140, in read_token
 AttributeError: 'list' object has no attribute 'read'</code></p>
 <p>I fix it reinstalling pipenv:</p>
 <p><code>sudo apt-get remove pipenv
-pip3 install pipenv</code></p>
-<p>## Flake8
- Makes the following warning:
- <code>./app/services/middle_processor.py:14:39: W605 invalid escape sequence '\d'</code>
- It seems that Python 3 interprets string literals as Unicode strings, and therefore our \d is treated as an escaped Unicode character. As I was following <a href="https://www.flake8rules.com/rules/W605.html">Flake8 rules regarding W605</a>  and <a href="https://www.flake8rules.com/rules/W503.html">Flake8 rules regarding W503</a> to avoid the warning I add --ignore flag when checking flake8 format:</p>
+pip3 install pipenv</code>
+ ## Flake8</p>
+<p>Makes the following warning:
+ <code>./app/services/middle_processor.py:14:39: W605 invalid escape sequence '\d'</code></p>
+<p>It seems that Python 3 interprets string literals as Unicode strings, and therefore our \d is treated as an escaped Unicode character. As I was following <a href="https://www.flake8rules.com/rules/W605.html">Flake8 rules regarding W605</a>  and <a href="https://www.flake8rules.com/rules/W503.html">Flake8 rules regarding W503</a> to avoid the warning I add --ignore flag when checking flake8 format:</p>
 <p><code>check-flake8 = "python -m flake8 --exclude=.venv/ --ignore=W605"</code>
  Even so, a warning is raised when I run tests with pytest. </p>
 </article>
@@ -320,13 +320,13 @@ pip3 install pipenv</code></p>
               </div>
 </div>
 </a>
-<a class="md-footer-nav__link md-footer-nav__link--next" href="../tests/index.html" rel="next">
+<a class="md-footer-nav__link md-footer-nav__link--next" href="future_implementations.html" rel="next">
 <div class="md-footer-nav__title">
 <div class="md-ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Tests Report
+                Future implementations
               </div>
 </div>
 <div class="md-footer-nav__button md-icon">

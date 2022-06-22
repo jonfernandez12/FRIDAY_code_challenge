@@ -1,12 +1,18 @@
 # Future implementations
 
+The following section will cover future features I would like to implement.
+
 ## Regular expressions
 
-The actual regular expression splits 7 from the proposed 9 strees and only 2 of the 4 complex ones. I am sure there must be a better regular expression that covers all of them. If not, maybe it would be a good idea once I have processed 7 of 9 streets, to try to reprocess the missing streets with another type of regular expression or method. 
+The actual regular expression splits 7 from the proposed 9 streets and only 2 of the 4 complex ones. I am sure there must be a better regular expression that covers all of them. If not, maybe it would be a good idea once I have processed 7 of 9 streets, to try to reprocess the missing streets with another type of regular expression or method. 
 
 ## Testing
 
 There is 14% of coverage missing because exception paths have not been covered. Also I miss adding JSON validation with pydantic by creating classes with the same structure as the expected json objects, so I can return more strong values in each function.
+
+## Database connection
+
+We have only tried 9 different streets and I would like to download a whole database with streets from all over the world to see how the program runs and make stronger the actual logic.
 
 ## Github actions
 
@@ -19,4 +25,9 @@ I am not sure if simple and middle processors are somehow useful, I leave them b
 ## Deepparse
 
 Using a pre-trained machine learning model its been hopeless and has lead to bad results, however I would not exclude to train some model with a huge database to get better results. 
+
+
+## Documentation
+
+Regarding documentation, I did not have time to use some profiler like pylint to generate an UML diagram so as to show in a visual graph the relation between classes and methods .
 

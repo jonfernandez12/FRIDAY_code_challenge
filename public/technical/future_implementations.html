@@ -119,10 +119,58 @@
         Faced problems
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="future_implementation.md">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Future implementations
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="future_implementations.html">
         Future implementations
       </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#regular-expressions">
+    Regular expressions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#testing">
+    Testing
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#database-connection">
+    Database connection
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#github-actions">
+    Github actions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-structure">
+    Code structure
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#deepparse">
+    Deepparse
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#documentation">
+    Documentation
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../tests/index.html">
@@ -164,6 +212,11 @@
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#database-connection">
+    Database connection
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#github-actions">
     Github actions
   </a>
@@ -178,6 +231,11 @@
     Deepparse
   </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#documentation">
+    Documentation
+  </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -186,21 +244,56 @@
 <div class="md-content">
 <article class="md-content__inner md-typeset">
 <h1 id="future-implementations">Future implementations</h1>
+<p>The following section will cover future features I would like to implement.</p>
 <h2 id="regular-expressions">Regular expressions</h2>
-<p>The actual regular expression splits 7 from the proposed 9 strees and only 2 of the 4 complex ones. I am sure there must be a better regular expression that covers all of them. If not, maybe it would be a good idea once I have processed 7 of 9 streets, to try to reprocess the missing streets with another type of regular expression or method. </p>
+<p>The actual regular expression splits 7 from the proposed 9 streets and only 2 of the 4 complex ones. I am sure there must be a better regular expression that covers all of them. If not, maybe it would be a good idea once I have processed 7 of 9 streets, to try to reprocess the missing streets with another type of regular expression or method. </p>
 <h2 id="testing">Testing</h2>
 <p>There is 14% of coverage missing because exception paths have not been covered. Also I miss adding JSON validation with pydantic by creating classes with the same structure as the expected json objects, so I can return more strong values in each function.</p>
+<h2 id="database-connection">Database connection</h2>
+<p>We have only tried 9 different streets and I would like to download a whole database with streets from all over the world to see how the program runs and make stronger the actual logic.</p>
 <h2 id="github-actions">Github actions</h2>
 <p>As I am more used to using Gitlab, I was not able to generate all HTML documentation directly in the cloud using Github actions and I decided to leave it in the project in "public/" folder.</p>
 <h2 id="code-structure">Code structure</h2>
 <p>I am not sure if simple and middle processors are somehow useful, I leave them because they were my first approach, but in a real world application they should be deleted. Also, I think about implementing an abstract processor and then all processors to inherit from that abstract class, but again, I do not think that really makes sense, because in real world there is no need for more than one processor.</p>
 <h2 id="deepparse">Deepparse</h2>
 <p>Using a pre-trained machine learning model its been hopeless and has lead to bad results, however I would not exclude to train some model with a huge database to get better results. </p>
+<h2 id="documentation">Documentation</h2>
+<p>Regarding documentation, I did not have time to use some profiler like pylint to generate an UML diagram so as to show in a visual graph the relation between classes and methods .</p>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
+<div class="md-footer-nav">
+<nav aria-label="Footer" class="md-footer-nav__inner md-grid">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="faced_problems.html" rel="prev">
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Faced problems
+              </div>
+</div>
+</a>
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../tests/index.html" rel="next">
+<div class="md-footer-nav__title">
+<div class="md-ellipsis">
+<span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Tests Report
+              </div>
+</div>
+<div class="md-footer-nav__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+</div>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-footer-copyright">

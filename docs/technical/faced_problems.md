@@ -87,12 +87,13 @@ AttributeError: 'list' object has no attribute 'read'
 sudo apt-get remove pipenv
 pip3 install pipenv
  ```
-
  ## Flake8
+
  Makes the following warning:
  ```
  ./app/services/middle_processor.py:14:39: W605 invalid escape sequence '\d'
  ```
+
  It seems that Python 3 interprets string literals as Unicode strings, and therefore our \d is treated as an escaped Unicode character. As I was following [Flake8 rules regarding W605](https://www.flake8rules.com/rules/W605.html)  and [Flake8 rules regarding W503](https://www.flake8rules.com/rules/W503.html) to avoid the warning I add --ignore flag when checking flake8 format:
 
  ```
