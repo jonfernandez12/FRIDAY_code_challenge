@@ -241,18 +241,16 @@
 <li>If you are using Visual Studio Code, you need to install <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python extension</a></li>
 </ul>
 <h2 id="start">Start</h2>
-<p><code>bash
-make start</code></p>
+<p><code>make start</code></p>
 <h3 id="git-hooks">Git Hooks</h3>
 <ul>
 <li><strong>Pre-commit</strong>: before each commit the <code>make run-tests</code> command will be executed. </li>
 </ul>
 <p>Note: If you want to ignore the pre-commit hook, add the flag <code>--no-verify</code> to the commit command.</p>
 <h2 id="install-dependencies">Install dependencies</h2>
-<p><code>bash
-make install-deps</code></p>
+<p><code>make install-deps</code></p>
 <h2 id="addremove-dependency">Add/remove dependency</h2>
-<p>```bash</p>
+<p>```</p>
 <h1 id="install-dependency">Install dependency</h1>
 <p>make install dep={{dependency}} ver={{dependency_version}} # Example: make install dep=requests ver=2.26.0
 make install-dev dep={{dependency}} ver={{dependency_version}} # Example: make install-dev dep=requests ver=2.26.0</p>
@@ -261,28 +259,22 @@ make install-dev dep={{dependency}} ver={{dependency_version}} # Example: make i
 ```</p>
 <h2 id="run">Run</h2>
 <p>Runs main application, located in app/main.py.</p>
-<p><code>bash
-make run</code></p>
+<p><code>make run</code></p>
 <h2 id="run-tests">Run tests</h2>
 <p>Run all tests defined in app/services/tests/test.py.</p>
-<p><code>bash
-make run-tests</code></p>
+<p><code>make run-tests</code></p>
 <h2 id="format-code">Format code</h2>
 <p>Orders dependencies with Isort and formats the code using Black.</p>
-<p><code>bash
-make format</code></p>
+<p><code>make format</code></p>
 <h2 id="check-format">Check format</h2>
 <p>Checks code format based on Isort, Black and Flake8 requirements.</p>
-<p><code>bash
-make check-format</code></p>
+<p><code>make check-format</code></p>
 <h2 id="check-types">Check types</h2>
 <p>Checks if all types are well typed.</p>
-<p><code>bash
-make check-types</code></p>
+<p><code>make check-types</code></p>
 <h2 id="generate-docs">Generate docs</h2>
 <p>Generate all documentation in HTML format and leaves it in public/index.html, open with your favorite browser.</p>
-<p><code>bash
-make docs</code></p>
+<p><code>make docs</code></p>
 </article>
 </div>
 </div>
