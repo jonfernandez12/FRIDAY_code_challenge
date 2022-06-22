@@ -1,7 +1,7 @@
 # FRIDAY_code_challenge
 Code challenge for FRIDAY, German branch of FRIDAY Insurance S.A.
 
-To access project documentation go to https://jonfernandez12.github.io/FRIDAY_code_challenge/public/.
+To access project documentation go to https://jonfernandez12.github.io/FRIDAY_code_challenge/public/index.html
 
 Jon Fernández Bedia
 
