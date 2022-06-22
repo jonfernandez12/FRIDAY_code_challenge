@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../img/friday_icon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.2.2, mkdocs-material-6.2.5" name="generator"/>
-<title>Statement - FRIDAY code challnge</title>
+<title>Modus operandi - FRIDAY code challnge</title>
 <link href="../assets/stylesheets/main.15aa0b43.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.75751829.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -20,7 +20,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#code-challenge">
+<a class="md-skip" href="#modus-operandi">
           Skip to content
         </a>
 </div>
@@ -44,7 +44,7 @@
 <div class="md-header-nav__topic">
 <span class="md-ellipsis">
             
-              Statement
+              Modus operandi
             
           </span>
 </div>
@@ -99,46 +99,29 @@
         Home
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          Statement
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="index.html">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../statement/index.html">
         Statement
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#addressline">
-    Addressline
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../technical/index.html">
+<a class="md-nav__link" href="index.html">
         Technical documentation
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../technical/modus_operandi.html">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="modus_operandi.html">
         Modus operandi
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../technical/faced_problems.html">
+<a class="md-nav__link" href="faced_problems.html">
         Faced problems
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../technical/future_implementation.md">
+<a class="md-nav__link" href="future_implementation.md">
         Future implementations
       </a>
 </li>
@@ -166,63 +149,61 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#addressline">
-    Addressline
-  </a>
-</li>
-</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<h1 id="code-challenge">CODE CHALLENGE</h1>
-<h2 id="addressline">Addressline</h2>
-<p>An address provider returns addresses only with concatenated street names and numbers. Our own system on the other hand has separate fields for street name and street number.</p>
-<p><strong>Input:</strong> string of address</p>
-<p><strong>Output:</strong> string of street and string of street-number as JSON object</p>
+<h1 id="modus-operandi">Modus operandi</h1>
+<p>The following section will cover which has been the procedure while developing the challenge, just for curiosity.</p>
+<p>[2022-06-16]</p>
 <ol>
-<li>Write a simple program that does the task for the most simple cases, e.g.</li>
-<li><code>"Winterallee 3"</code> -&gt; <code>{"street": "Winterallee", "housenumber": "3"}</code></li>
-<li><code>"Musterstrasse 45"</code> -&gt; <code>{"street": "Musterstrasse", "housenumber": "45"}</code></li>
 <li>
-<p><code>"Blaufeldweg 123B"</code> -&gt; <code>{"street": "Blaufeldweg", "housenumber": "123B"}</code></p>
+<p>Read statement</p>
 </li>
 <li>
-<p>Consider more complicated cases</p>
-</li>
-<li><code>"Am Bächle 23"</code> -&gt; <code>{"street": "Am Bächle", "housenumber": "23"}</code></li>
-<li>
-<p><code>"Auf der Vogelwiese 23 b"</code> -&gt; <code>{"street": "Auf der Vogelwiese", "housenumber": "23 b"}</code></p>
-</li>
-<li>
-<p>Consider other countries (complex cases)</p>
-</li>
-<li><code>"4, rue de la revolution"</code> -&gt; <code>{"street": "rue de la revolution", "housenumber": "4"}</code></li>
-<li><code>"200 Broadway Av"</code> -&gt; <code>{"street": "Broadway Av", "housenumber": "200"}</code></li>
-<li><code>"Calle Aduana, 29"</code> -&gt; <code>{"street": "Calle Aduana", "housenumber": "29"}</code></li>
-<li><code>"Calle 39 No 1540"</code> -&gt; <code>{"street": "Calle 39", "housenumber": "No 1540"}</code></li>
-</ol>
-<p><strong>Your Task:</strong>
-Solve the task using your best programming skills and share the code in a public repository via a public hoster like Github. Contact us via jobs@friday.de.</p>
-<p>When choosing your approach of implementation, please keep following things in mind:</p>
+<p>Free thinking: </p>
 <ul>
-<li>While we will try to evaluate all code that is sent to us, keep in mind that we will feel most comfortable with the tools we know:<ul>
-<li>Python</li>
-<li>Pandas</li>
-<li>PySpark</li>
-<li>SQL</li>
+<li>First challenge looks easy, thinking about split() / strip(). </li>
+<li>Second challenge also easy, read until a numeric is found.</li>
+<li>Third challenge looks like it needs another field such as postal code or an IA app to identify the country so as to know how to split streets or maybe an IA that learns how to split streets. </li>
+<li>Do I need a country, street and number database to cover all cases? </li>
 </ul>
 </li>
-<li>We prefer quality over speed. It does not only matter if your solution yields correct results, but we will also take a close look on your overall project structure, the tools used, test coverage, documentation, etc.</li>
+<li>
+<p>Looks like regex is needed for the second challenge, did not think about german dictionary.</p>
+<ul>
+<li><a href="https://regex101.com/r/fi5Ca2/1">Nice link!</a></li>
+<li><a href="https://stackoverflow.com/questions/55774903/regular-expression-to-split-a-street-address-that-may-have-optional-numbers-with">Nice link 2!</a>
+<img alt="Regex Example" src="regex_example.png"/></li>
+<li>Need to try to understand how does regex exactly works and adapt to my needs.</li>
 </ul>
+</li>
+</ol>
+<p>[2022-06-17]</p>
+<ol>
+<li>
+<p>I found a good regex that works 7/9 of the times (all streets but "4, rue de la revolution" and "Calle 39 No 1540") , I am going to try another kind of process to parse streets.
+<code>"^(\b\D+\b)?\s*(\b.*?\d.*?\b)\s*(\b\D+\b)?$"</code></p>
+</li>
+<li>
+<p>I found an <a href="https://github.com/GRAAL-Research/deepparse">state-of-the-art library for parsing multinational street addresses using deep learning</a>, let's see how it works.</p>
+</li>
+</ol>
+<p>[2022-06-19]</p>
+<ol>
+<li>I read again the challenge statement and as I was blocked with some streets, I decide to start using TDD and use as many python best practices as I know, incorporating the following concepts:</li>
+<li>Start developing following TDD, this is, start using automated unit tests to drive the development of our code.</li>
+<li>Add code formatting frameworks such as Black, Flake8 and Isort and automatizing code format checks whenever a commit was done.</li>
+<li>Add Makefile so it simplifies code running, testing and formatting no matter what IDE is being used.</li>
+<li>Add docs folder and organizing better documentation. Also adding testing and coverage reports into the documentation.</li>
+</ol>
+<p>[2022-06-21]</p>
+<ol>
+<li>Understand how Actions in github work, trying to automate the execution of all docs an leave  them in public/ folder, finally not achieved, I create public in local and uploaded to Github so is accessible via https://jonfernandez12.github.io/FRIDAY_code_challenge/public/.</li>
+<li>Thinking about how to organize project. First 3 files where developed with one processing function each of them, then I think it was a better idea to create a Processor class, Repository class and Validator class to organize concepts in the code structure.</li>
+</ol>
 </article>
 </div>
 </div>
@@ -230,7 +211,7 @@ Solve the task using your best programming skills and share the code in a public
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav aria-label="Footer" class="md-footer-nav__inner md-grid">
-<a class="md-footer-nav__link md-footer-nav__link--prev" href="../index.html" rel="prev">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="index.html" rel="prev">
 <div class="md-footer-nav__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -239,17 +220,17 @@ Solve the task using your best programming skills and share the code in a public
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                Technical documentation
               </div>
 </div>
 </a>
-<a class="md-footer-nav__link md-footer-nav__link--next" href="../technical/index.html" rel="next">
+<a class="md-footer-nav__link md-footer-nav__link--next" href="faced_problems.html" rel="next">
 <div class="md-footer-nav__title">
 <div class="md-ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Technical documentation
+                Faced problems
               </div>
 </div>
 <div class="md-footer-nav__button md-icon">

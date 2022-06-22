@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../img/friday_icon.png" rel="shortcut icon"/>
 <meta content="mkdocs-1.2.2, mkdocs-material-6.2.5" name="generator"/>
-<title>Statement - FRIDAY code challnge</title>
+<title>Faced problems - FRIDAY code challnge</title>
 <link href="../assets/stylesheets/main.15aa0b43.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.75751829.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -20,7 +20,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#code-challenge">
+<a class="md-skip" href="#faced-problems">
           Skip to content
         </a>
 </div>
@@ -44,7 +44,7 @@
 <div class="md-header-nav__topic">
 <span class="md-ellipsis">
             
-              Statement
+              Faced problems
             
           </span>
 </div>
@@ -99,14 +99,29 @@
         Home
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../statement/index.html">
+        Statement
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="index.html">
+        Technical documentation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="modus_operandi.html">
+        Modus operandi
+      </a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          Statement
+          Faced problems
           <span class="md-nav__icon md-icon"></span>
 </label>
-<a class="md-nav__link md-nav__link--active" href="index.html">
-        Statement
+<a class="md-nav__link md-nav__link--active" href="faced_problems.html">
+        Faced problems
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -115,30 +130,35 @@
     </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#addressline">
-    Addressline
+<a class="md-nav__link" href="#multiple-ssh-keys-on-same-machine">
+    Multiple SSH keys on same machine
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#regex">
+    Regex
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#deepparse">
+    Deepparse
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#testing">
+    Testing
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pipenv">
+    Pipenv
   </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../technical/index.html">
-        Technical documentation
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../technical/modus_operandi.html">
-        Modus operandi
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../technical/faced_problems.html">
-        Faced problems
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../technical/future_implementation.md">
+<a class="md-nav__link" href="future_implementation.md">
         Future implementations
       </a>
 </li>
@@ -172,8 +192,28 @@
     </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#addressline">
-    Addressline
+<a class="md-nav__link" href="#multiple-ssh-keys-on-same-machine">
+    Multiple SSH keys on same machine
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#regex">
+    Regex
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#deepparse">
+    Deepparse
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#testing">
+    Testing
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pipenv">
+    Pipenv
   </a>
 </li>
 </ul>
@@ -183,46 +223,83 @@
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<h1 id="code-challenge">CODE CHALLENGE</h1>
-<h2 id="addressline">Addressline</h2>
-<p>An address provider returns addresses only with concatenated street names and numbers. Our own system on the other hand has separate fields for street name and street number.</p>
-<p><strong>Input:</strong> string of address</p>
-<p><strong>Output:</strong> string of street and string of street-number as JSON object</p>
+<h1 id="faced-problems">Faced problems</h1>
+<p>The following section will cover the problems I have faced during challenge implementation.</p>
+<h2 id="multiple-ssh-keys-on-same-machine">Multiple SSH keys on same machine</h2>
 <ol>
-<li>Write a simple program that does the task for the most simple cases, e.g.</li>
-<li><code>"Winterallee 3"</code> -&gt; <code>{"street": "Winterallee", "housenumber": "3"}</code></li>
-<li><code>"Musterstrasse 45"</code> -&gt; <code>{"street": "Musterstrasse", "housenumber": "45"}</code></li>
-<li>
-<p><code>"Blaufeldweg 123B"</code> -&gt; <code>{"street": "Blaufeldweg", "housenumber": "123B"}</code></p>
-</li>
-<li>
-<p>Consider more complicated cases</p>
-</li>
-<li><code>"Am Bächle 23"</code> -&gt; <code>{"street": "Am Bächle", "housenumber": "23"}</code></li>
-<li>
-<p><code>"Auf der Vogelwiese 23 b"</code> -&gt; <code>{"street": "Auf der Vogelwiese", "housenumber": "23 b"}</code></p>
-</li>
-<li>
-<p>Consider other countries (complex cases)</p>
-</li>
-<li><code>"4, rue de la revolution"</code> -&gt; <code>{"street": "rue de la revolution", "housenumber": "4"}</code></li>
-<li><code>"200 Broadway Av"</code> -&gt; <code>{"street": "Broadway Av", "housenumber": "200"}</code></li>
-<li><code>"Calle Aduana, 29"</code> -&gt; <code>{"street": "Calle Aduana", "housenumber": "29"}</code></li>
-<li><code>"Calle 39 No 1540"</code> -&gt; <code>{"street": "Calle 39", "housenumber": "No 1540"}</code></li>
+<li>To clone and interact with another github account, just create a new ssh-key:</li>
 </ol>
-<p><strong>Your Task:</strong>
-Solve the task using your best programming skills and share the code in a public repository via a public hoster like Github. Contact us via jobs@friday.de.</p>
-<p>When choosing your approach of implementation, please keep following things in mind:</p>
-<ul>
-<li>While we will try to evaluate all code that is sent to us, keep in mind that we will feel most comfortable with the tools we know:<ul>
-<li>Python</li>
-<li>Pandas</li>
-<li>PySpark</li>
-<li>SQL</li>
-</ul>
+<p><code>ssh-keygen -t rsa</code></p>
+<ol>
+<li>Save it on <strong>/home/jon/.ssh/</strong> with a different name if one already exists.</li>
+</ol>
+<p><code>ssh-add ~/.ssh/&lt;new_private_key_file&gt;</code></p>
+<ol>
+<li>
+<p>Copy public key and paste on Github&gt;Settings&gt;SSH and GPG keys</p>
 </li>
-<li>We prefer quality over speed. It does not only matter if your solution yields correct results, but we will also take a close look on your overall project structure, the tools used, test coverage, documentation, etc.</li>
-</ul>
+<li>
+<p>Add configuration on <strong>/home/jon/.ssh/config</strong>
+<code>Host &lt;alias_name&gt;
+    Hostname github.com
+    User git
+    IdentityFile ~/.ssh/&lt;new_private_key_file&gt; 
+    IdentitiesOnly yes</code></p>
+</li>
+<li>Finally clone repository with 
+  <code>git clone &lt;alias_name&gt;:&lt;github_name&gt;/&lt;proyect_name&gt;.git</code></li>
+</ol>
+<h2 id="regex">Regex</h2>
+<p>I need to learn what is regex from the very beginning, I find some useful websites as that given a regex explain what was defining each character. Finally I decided to use "^(\b\D+\b)?\s<em>(\b.</em>?\d.<em>?\b)\s</em>(\b\D+\b)?$" as is the one with better splitting results for the data given.</p>
+<h2 id="deepparse">Deepparse</h2>
+<p>I try a pre-trained machine learning classification method to see if I get better results than with the regex method, I need to understand how to extract data from the output returned by the model and which models where available using the library and which one was better for this purpose. As I was not worried about cpu limitations I used 'best' model.</p>
+<p><code>{bibliography}
+    author = {Marouane Yassine and David Beauchemin},
+    title  = {{Deepparse: A State-Of-The-Art Deep Learning Multinational Addresses Parser}},
+    year   = {2020},
+    note   = [url](https://deepparse.org)</code></p>
+<h2 id="testing">Testing</h2>
+<p>I discovered <a href="https://realpython.com/pytest-python-testing/">helpful documentation</a> about python testing and fixtures as I am not used to make tests. Although I knew about TDD methodology.</p>
+<p>Also, I modify the output of tests from a boolean type to a comparison between actual processed streets and expected streets, as a boolean gives no information about which streets are well parsed and which not. I did not find out a good library for asserting json lists so I convert them into python lists first, so I could make use of unittest TestCase library.</p>
+<h2 id="pipenv">Pipenv</h2>
+<p>Somehow, <strong>pipenv run</strong> commands was not working, giving the following error:
+<code>Traceback (most recent call last):
+File "/usr/bin/pipenv", line 11, in &lt;module&gt;
+  load_entry_point('pipenv==11.9.0', 'console_scripts', 'pipenv')()
+File "/usr/lib/python3/dist-packages/pipenv/vendor/click/core.py", line 722, in __call__
+  return self.main(*args, **kwargs)
+File "/usr/lib/python3/dist-packages/pipenv/vendor/click/core.py", line 697, in main
+  rv = self.invoke(ctx)
+File "/usr/lib/python3/dist-packages/pipenv/vendor/click/core.py", line 1066, in invoke
+  return _process_result(sub_ctx.command.invoke(sub_ctx))
+File "/usr/lib/python3/dist-packages/pipenv/vendor/click/core.py", line 895, in invoke
+  return ctx.invoke(self.callback, **ctx.params)
+File "/usr/lib/python3/dist-packages/pipenv/vendor/click/core.py", line 535, in invoke
+  return callback(*args, **kwargs)
+File "/usr/lib/python3/dist-packages/pipenv/cli.py", line 602, in run
+  core.do_run(command=command, args=args, three=three, python=python)
+File "/usr/lib/python3/dist-packages/pipenv/core.py", line 2200, in do_run
+  command = ' '.join(project.scripts[command])
+File "/usr/lib/python3/dist-packages/pipenv/project.py", line 374, in scripts
+  scripts[k] = shlex.split(v, posix=True)
+File "/usr/lib/python3.8/shlex.py", line 311, in split
+  return list(lex)
+File "/usr/lib/python3.8/shlex.py", line 300, in __next__
+  token = self.get_token()
+File "/usr/lib/python3.8/shlex.py", line 109, in get_token
+  raw = self.read_token()
+File "/usr/lib/python3.8/shlex.py", line 140, in read_token
+  nextchar = self.instream.read(1)
+AttributeError: 'list' object has no attribute 'read'</code></p>
+<p>I fix it reinstalling pipenv:</p>
+<p><code>sudo apt-get remove pipenv
+pip3 install pipenv</code></p>
+<p>## Flake8
+ Makes the following warning:
+ <code>./app/services/middle_processor.py:14:39: W605 invalid escape sequence '\d'</code>
+ It seems that Python 3 interprets string literals as Unicode strings, and therefore our \d is treated as an escaped Unicode character. As I was following <a href="https://www.flake8rules.com/rules/W605.html">Flake8 rules regarding W605</a>  and <a href="https://www.flake8rules.com/rules/W503.html">Flake8 rules regarding W503</a> to avoid the warning I add --ignore flag when checking flake8 format:</p>
+<p><code>check-flake8 = "python -m flake8 --exclude=.venv/ --ignore=W605"</code>
+ Even so, a warning is raised when I run tests with pytest. </p>
 </article>
 </div>
 </div>
@@ -230,7 +307,7 @@ Solve the task using your best programming skills and share the code in a public
 <footer class="md-footer">
 <div class="md-footer-nav">
 <nav aria-label="Footer" class="md-footer-nav__inner md-grid">
-<a class="md-footer-nav__link md-footer-nav__link--prev" href="../index.html" rel="prev">
+<a class="md-footer-nav__link md-footer-nav__link--prev" href="modus_operandi.html" rel="prev">
 <div class="md-footer-nav__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -239,17 +316,17 @@ Solve the task using your best programming skills and share the code in a public
 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                Modus operandi
               </div>
 </div>
 </a>
-<a class="md-footer-nav__link md-footer-nav__link--next" href="../technical/index.html" rel="next">
+<a class="md-footer-nav__link md-footer-nav__link--next" href="../tests/index.html" rel="next">
 <div class="md-footer-nav__title">
 <div class="md-ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Technical documentation
+                Tests Report
               </div>
 </div>
 <div class="md-footer-nav__button md-icon">

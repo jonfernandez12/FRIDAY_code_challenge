@@ -1,4 +1,5 @@
 import json
+from typing import Tuple
 
 
 class Validator:
@@ -7,7 +8,7 @@ class Validator:
     Class for validate data.
     """
 
-    def validate_data(self, actual: str, expected: str) -> tuple[float, list]:
+    def validate_data(self, actual: str, expected: str) -> Tuple[float, list]:
         """
         Function that given an actual json list and expected json
         list, transforms the data into lists and returns matching

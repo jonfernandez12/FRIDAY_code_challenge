@@ -152,6 +152,21 @@
       </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="technical/modus_operandi.html">
+        Modus operandi
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="technical/faced_problems.html">
+        Faced problems
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="technical/future_implementation.md">
+        Future implementations
+      </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="tests/index.html">
         Tests Report
       </a>
@@ -218,6 +233,7 @@
 <article class="md-content__inner md-typeset">
 <h1 id="friday_code_challenge">FRIDAY_code_challenge</h1>
 <p>Code challenge for FRIDAY, German branch of FRIDAY Insurance S.A.
+To access project documentation go to https://jonfernandez12.github.io/FRIDAY_code_challenge/public/.
 Jon Fernández Bedia</p>
 <h2 id="requisites">Requisites</h2>
 <ul>
@@ -244,27 +260,28 @@ make install-dev dep={{dependency}} ver={{dependency_version}} # Example: make i
 <p>make uninstall dep={{dependency}} # Example: make uninstall dep=requests
 ```</p>
 <h2 id="run">Run</h2>
-<p>Runs main application, located in app/main.py .
-<code>bash
+<p>Runs main application, located in app/main.py.</p>
+<p><code>bash
 make run</code></p>
 <h2 id="run-tests">Run tests</h2>
-<p>Run all tests defined in app/services/tests/test.py.
-<code>bash
+<p>Run all tests defined in app/services/tests/test.py.</p>
+<p><code>bash
 make run-tests</code></p>
 <h2 id="format-code">Format code</h2>
-<p>Orders dependencies with isort and formats the code using the requirementes defined on pyproject.toml.</p>
+<p>Orders dependencies with Isort and formats the code using Black.</p>
 <p><code>bash
 make format</code></p>
 <h2 id="check-format">Check format</h2>
+<p>Checks code format based on Isort, Black and Flake8 requirements.</p>
 <p><code>bash
 make check-format</code></p>
 <h2 id="check-types">Check types</h2>
+<p>Checks if all types are well typed.</p>
 <p><code>bash
 make check-types</code></p>
 <h2 id="generate-docs">Generate docs</h2>
-<p>To access all project documentation, open public&gt;index.html with your favorite browser . Also it can be accessed via 
-https://jonfernandez12.github.io/FRIDAY_code_challenge/public/
-<code>bash
+<p>Generate all documentation in HTML format and leaves it in public/index.html, open with your favorite browser.</p>
+<p><code>bash
 make docs</code></p>
 </article>
 </div>

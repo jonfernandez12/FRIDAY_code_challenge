@@ -1,7 +1,7 @@
 
 # Faced problems
 
-The following section will cover the problems I have face during challenge implementation.
+The following section will cover the problems I have faced during challenge implementation.
 
 ## Multiple SSH keys on same machine
 1. To clone and interact with another github account, just create a new ssh-key:
@@ -32,10 +32,10 @@ ssh-keygen -t rsa
  ```
 
 ## Regex
-I need to learn what is regex from the very beginning, we find some useful websites as that given a regex explain what was defining each character. Finally I decided to use "^(\b\D+\b)?\s*(\b.*?\d.*?\b)\s*(\b\D+\b)?$" as is the one with better splitting results.
+I need to learn what is regex from the very beginning, I find some useful websites as that given a regex explain what was defining each character. Finally I decided to use "^(\b\D+\b)?\s*(\b.*?\d.*?\b)\s*(\b\D+\b)?$" as is the one with better splitting results for the data given.
 
 ## Deepparse
-We try a pre-trained machine learning classification method to see if we get better results than with the regex method, we need to understand how to extract data from the output returned by the model and which models where available using the library and which one was better for this purpose. As if we were not worried about cpu limitations we used 'best' model.
+I try a pre-trained machine learning classification method to see if I get better results than with the regex method, I need to understand how to extract data from the output returned by the model and which models where available using the library and which one was better for this purpose. As I was not worried about cpu limitations I used 'best' model.
 
  ```{bibliography}
     author = {Marouane Yassine and David Beauchemin},
@@ -46,7 +46,7 @@ We try a pre-trained machine learning classification method to see if we get bet
 ## Testing
 I discovered [helpful documentation](https://realpython.com/pytest-python-testing/) about python testing and fixtures as I am not used to make tests. Although I knew about TDD methodology.
 
-Also, I modify the output of tests from a boolean type to a comparison between actual processed streets and expected streets, as a boolean gives no information about which streets are well parsed and which not. I did not find out a good library for asserting json lists so we convert them into python lists first, so I could make use of unittest TestCase library.
+Also, I modify the output of tests from a boolean type to a comparison between actual processed streets and expected streets, as a boolean gives no information about which streets are well parsed and which not. I did not find out a good library for asserting json lists so I convert them into python lists first, so I could make use of unittest TestCase library.
 
 ## Pipenv
 Somehow, **pipenv run** commands was not working, giving the following error:
@@ -93,9 +93,9 @@ pip3 install pipenv
  ```
  ./app/services/middle_processor.py:14:39: W605 invalid escape sequence '\d'
  ```
- It seems that Python 3 interprets string literals as Unicode strings, and therefore our \d is treated as an escaped Unicode character. As we are following [Flake8 rules regarding W605](https://www.flake8rules.com/rules/W605.html)  and [Flake8 rules regarding W503](https://www.flake8rules.com/rules/W503.html) to avoid the warning we add --ignore flag when checking flake8 format:
+ It seems that Python 3 interprets string literals as Unicode strings, and therefore our \d is treated as an escaped Unicode character. As I was following [Flake8 rules regarding W605](https://www.flake8rules.com/rules/W605.html)  and [Flake8 rules regarding W503](https://www.flake8rules.com/rules/W503.html) to avoid the warning I add --ignore flag when checking flake8 format:
 
  ```
 check-flake8 = "python -m flake8 --exclude=.venv/ --ignore=W605"
  ```
- Even so, a warning is raised when we run tests with pytest. 
+ Even so, a warning is raised when I run tests with pytest. 

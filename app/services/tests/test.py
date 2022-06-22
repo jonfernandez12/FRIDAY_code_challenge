@@ -1,5 +1,6 @@
 import json
 import unittest
+from typing import Tuple
 
 import pytest
 
@@ -150,7 +151,7 @@ def expected_complex_data_sample() -> str:
 
 
 @pytest.fixture
-def validation_data(expected_complex_data_sample) -> tuple[float, str]:
+def validation_data(expected_complex_data_sample) -> Tuple[float, str]:
     """
     Function  to test validate_data(),
     takes expected complex data json object

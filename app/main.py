@@ -91,7 +91,6 @@ def call_all_processors(
                 ),
             }
         )
-    print(processed_data)
     return processed_data
 
 

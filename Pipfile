@@ -10,7 +10,7 @@ pyverse = "*"
 
 [dev-packages]
 coverage = "==5.0.4"
-black = "22.3.0"
+black = "==21.4b0"
 pytest-html-reporter = "==0.2.3"
 pytest = "==6.1.2"
 isort = "==5.5.1"

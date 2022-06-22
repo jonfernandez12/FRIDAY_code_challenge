@@ -1,6 +1,6 @@
 # Modus operandi
 
-The following section will cover which has been the procedure while developing the challenge.
+The following section will cover which has been the procedure while developing the challenge, just for curiosity.
 
 [2022-06-16]
 
@@ -40,4 +40,4 @@ The following section will cover which has been the procedure while developing t
 [2022-06-21]
 
 7.  Understand how Actions in github work, trying to automate the execution of all docs an leave  them in public/ folder, finally not achieved, I create public in local and uploaded to Github so is accessible via https://jonfernandez12.github.io/FRIDAY_code_challenge/public/.
-8. Thinking about how to organize project. First 3 files where developed with one function each of them, then I think it was a better idea to create a Processor class, Repository class and Validator class to organize concepts in the code structure.
+8. Thinking about how to organize project. First 3 files where developed with one processing function each of them, then I think it was a better idea to create a Processor class, Repository class and Validator class to organize concepts in the code structure.

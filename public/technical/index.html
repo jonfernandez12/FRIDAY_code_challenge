@@ -20,7 +20,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#modus-operandi">
+<a class="md-skip" href="#techinal-documentation">
           Skip to content
         </a>
 </div>
@@ -106,8 +106,74 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Technical documentation
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="index.html">
         Technical documentation
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-structure">
+    Code Structure
+  </a>
+<nav aria-label="Code Structure" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#repository">
+    Repository
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#processor">
+    Processor
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#validator">
+    Validator
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#testing">
+    Testing
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#documentation">
+    Documentation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#makefile">
+    Makefile
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="modus_operandi.html">
+        Modus operandi
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="faced_problems.html">
+        Faced problems
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="future_implementation.md">
+        Future implementations
       </a>
 </li>
 <li class="md-nav__item">
@@ -134,127 +200,98 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#code-structure">
+    Code Structure
+  </a>
+<nav aria-label="Code Structure" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#repository">
+    Repository
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#processor">
+    Processor
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#validator">
+    Validator
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#testing">
+    Testing
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#documentation">
+    Documentation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#makefile">
+    Makefile
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content">
 <article class="md-content__inner md-typeset">
-<h1 id="modus-operandi">Modus operandi</h1>
-<p>[2022-06-16]
-1. Read statement</p>
-<ol>
-<li>
-<p>Free thinking: </p>
-<ul>
-<li>First challenge looks easy, thinking about split() / strip(). </li>
-<li>Second challenge also easy, read until a numeric is found.</li>
-<li>Third challenge looks like it needs another field such as postal code or an IA app to identify the country so as to know how to split streets or maybe an IA that learns how to split streets. </li>
-<li>Do I need a country, street and number database to cover all cases? </li>
-</ul>
-</li>
-<li>
-<p>Looks like regex is needed for the second challenge, did not think about german dictionary, is not going to be easy.</p>
-<ul>
-<li><a href="https://regex101.com/r/fi5Ca2/1">Nice link!</a></li>
-<li><a href="https://stackoverflow.com/questions/55774903/regular-expression-to-split-a-street-address-that-may-have-optional-numbers-with">Nice link 2!</a>
-<img alt="Regex Example" src="regex_example.png"/></li>
-<li>Need to try to understand how does regex exactly works and adapt to my needs.</li>
-</ul>
-</li>
-</ol>
-<p>[2022-06-17]
-4. We found a good regex that works 7/9 of the times (all streets but "4, rue de la revolution" and "Calle 39 No 1540") , we are going to try another kind of process to parse streets.
-<code>"^(\b\D+\b)?\s*(\b.*?\d.*?\b)\s*(\b\D+\b)?$"</code></p>
-<ol>
-<li>We found an <a href="https://github.com/GRAAL-Research/deepparse">state-of-the-art library for parsing multinational street addresses using deep learning</a>, let's see how it works.</li>
-</ol>
-<p>[2022-06-19]
-6. We read again the challenge statement and as we where blocked with 8/9 parsed streets, we decide to start using TDD and use as many python best practices as we can, incorporating the following concepts:
-- Start developing following TDD, this is, start using automated unit tests to drive the development of our code.
-- Add code formatting frameworks such as Black, Flake8 and Isort and automatizing code format checks whenever a commit was done.
-- Add Makefile so it simplifies code running, testing and formatting no matter what IDE is being used.
-- Add docs folder and organizing better documentation. Also adding testing and coverage reports into the documentation.</p>
-<p>[2022-06-21]
-7.  Understand how Actions in github work, trying to automate the execution of all docs an leave  them in public/ folder.
-8. Thinking about how to organize project. (from functions to classes and main execution)
-9. Add  json validation</p>
-<h1 id="faced-problems">Faced problems</h1>
-<h2 id="multiple-ssh-keys-on-same-machine">Multiple SSH keys on same machine</h2>
-<ol>
-<li>To clone and interact with another github account, just create a new ssh-key:</li>
-</ol>
-<p><code>ssh-keygen -t rsa</code></p>
-<ol>
-<li>Save it on <strong>/home/jon/.ssh/</strong> with a different name if one already exists.</li>
-</ol>
-<p><code>ssh-add ~/.ssh/&lt;new_private_key_file&gt;</code></p>
-<ol>
-<li>
-<p>Copy public key and paste on Github&gt;Settings&gt;SSH and GPG keys</p>
-</li>
-<li>
-<p>Add configuration on <strong>/home/jon/.ssh/config</strong>
-<code>Host &lt;alias_name&gt;
-    Hostname github.com
-    User git
-    IdentityFile ~/.ssh/&lt;new_private_key_file&gt; 
-    IdentitiesOnly yes</code></p>
-</li>
-<li>Finally clone repository with 
-  <code>git clone &lt;alias_name&gt;:&lt;github_name&gt;/&lt;proyect_name&gt;.git</code></li>
-</ol>
-<h2 id="regex">REGEX</h2>
-<p>We need to learn what was regex from the very beginning, we find some useful websites as that given a regex explain what was deifning each character.</p>
-<h2 id="deepparse">Deepparse</h2>
-<p>We try a pre-trained machine learning classification method to see if we get better results than with the regex method, we need to understand how to extract data from the output returned by the model and which models where available using the library and which one was better for this purpose. As if we were not worried about cpu limitations we used 'best' model.</p>
-<p><code>{bibliography}
-    author = {Marouane Yassine and David Beauchemin},
-    title  = {{Deepparse: A State-Of-The-Art Deep Learning Multinational Addresses Parser}},
-    year   = {2020},
-    note   = [url](https://deepparse.org)</code></p>
-<h2 id="testing">Testing</h2>
-<p>We discovered <a href="https://realpython.com/pytest-python-testing/">helpful documentation</a> about python testing. We  about fixtures as we are not used to make tests. Although we knew about TDD methodology.</p>
-<p>Also, we modify the output of tests from a boolean type to a comparison between actual processed streets and expected streets, as a boolean gives no information about which streets are well parsed and which not. We did not find out a good library for asserting json lists so we convert them into python lists first and so we could make use of unittest TestCase library.</p>
-<h2 id="pipenv">Pipenv</h2>
-<p>Somehow, <strong>pipenv run</strong> commands was not working, giving us the following error:
-<code>Traceback (most recent call last):
-File "/usr/bin/pipenv", line 11, in &lt;module&gt;
-  load_entry_point('pipenv==11.9.0', 'console_scripts', 'pipenv')()
-File "/usr/lib/python3/dist-packages/pipenv/vendor/click/core.py", line 722, in __call__
-  return self.main(*args, **kwargs)
-File "/usr/lib/python3/dist-packages/pipenv/vendor/click/core.py", line 697, in main
-  rv = self.invoke(ctx)
-File "/usr/lib/python3/dist-packages/pipenv/vendor/click/core.py", line 1066, in invoke
-  return _process_result(sub_ctx.command.invoke(sub_ctx))
-File "/usr/lib/python3/dist-packages/pipenv/vendor/click/core.py", line 895, in invoke
-  return ctx.invoke(self.callback, **ctx.params)
-File "/usr/lib/python3/dist-packages/pipenv/vendor/click/core.py", line 535, in invoke
-  return callback(*args, **kwargs)
-File "/usr/lib/python3/dist-packages/pipenv/cli.py", line 602, in run
-  core.do_run(command=command, args=args, three=three, python=python)
-File "/usr/lib/python3/dist-packages/pipenv/core.py", line 2200, in do_run
-  command = ' '.join(project.scripts[command])
-File "/usr/lib/python3/dist-packages/pipenv/project.py", line 374, in scripts
-  scripts[k] = shlex.split(v, posix=True)
-File "/usr/lib/python3.8/shlex.py", line 311, in split
-  return list(lex)
-File "/usr/lib/python3.8/shlex.py", line 300, in __next__
-  token = self.get_token()
-File "/usr/lib/python3.8/shlex.py", line 109, in get_token
-  raw = self.read_token()
-File "/usr/lib/python3.8/shlex.py", line 140, in read_token
-  nextchar = self.instream.read(1)
-AttributeError: 'list' object has no attribute 'read'</code></p>
-<p>We fix it reinstalling pipenv:</p>
-<p><code>sudo apt-get remove pipenv
-pip3 install pipenv</code></p>
-<p>## Flake8
- Makes the following warning:
- <code>./app/services/middle_processor.py:14:39: W605 invalid escape sequence '\d'</code>
- It seems that Python 3 interprets string literals as Unicode strings, and therefore our \d is treated as an escaped Unicode character. As we are following <a href="https://www.flake8rules.com/rules/W605.html">Flake8 rules regarding W605</a>  and <a href="https://www.flake8rules.com/rules/W503.html">Flake8 rules regarding W503</a> to avoid the warning we add --ignore flag when checking flake8 format:</p>
-<p><code>check-flake8 = "python -m flake8 --exclude=.venv/ --ignore=W605"</code>
- Even so, a warning is raised when we run tests with pytest. </p>
+<h1 id="techinal-documentation">Techinal documentation</h1>
+<p>The following section will cover technical aspects of the development.</p>
+<h2 id="code-structure">Code Structure</h2>
+<p>The selected code structure has been designed based on the purpose I was asked, this is, data processing. First of all I start thinking about the processor, without taking care of how I was initializing data. Second, came testing, so as to validate data and develop processors at the same time. Then, the need for a repository came up, because data need to be initialized in a proper and secure way and looking into future to possible connections to database.  Last, when I was developing the main thread, the need for a validation and proper results arose. Also together with validation a proper way of logging was needed and I created a logger.</p>
+<h3 id="repository">Repository</h3>
+<p>The repository class is meant to be the one that accesses the data, most commonly a database. In this case, only plays the role of getter as data is hardcoded. From this class I can obtain raw data as well as expected data.</p>
+<h3 id="processor">Processor</h3>
+<p>Processor, as the world itself describes it, has all the methods to process the data:
+- simple processor: First approach, it was meant to process simplest data, this is, data from task 1. 
+- middle processor: Second approach, it was meant to process middle complex data, this is, data from task 2. 
+- complex processor: Third approach, it was meant to process more complex data, this is, data from task 3. 
+- complex deeparse processor: Fourth approach, it was meant to process complex data using machine learning classificator. </p>
+<h3 id="validator">Validator</h3>
+<p>Finally, the validator, only has one method and is used to validate data between the streets I have processed and the expected ones, It gives us information about how many streets have been successfully processed and which are them. </p>
+<h3 id="testing">Testing</h3>
+<p>For testing pytest and unittest have been used, at first, I try to compare json objects but then I figures out it was easier to compare python lists using assertCountEqual() function. Also pytest fixtures have been used to provide fixed data and instances for the tests. </p>
+<h2 id="documentation">Documentation</h2>
+<p>Plenty documentation is offered, coverage documentation with coverage library, format related documentation using Flake8 and project documentation using mkdocs. </p>
+<h2 id="makefile">Makefile</h2>
+<p>Finally a makefile have been provided so that program execution, testing and documenting is easier and more flexible when switching between IDEs. Also some tasks have been automatized, for example, when "make docs" command is executed, all tests, coverage and markdown text is processed and grouped in html format in public/ folder. Is worth mentioning that Makefile interacts also with Pipfile, as they have been described also less abstract scripts in this file. For example the command flow for command "make format" would be the following:</p>
+<table>
+<thead>
+<tr>
+<th>Makefile</th>
+<th>Pipfile</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>make format</td>
+<td>pipenv run black &amp;&amp;</td>
+<td>python -m black . &amp;&amp;</td>
+</tr>
+<tr>
+<td></td>
+<td>pipenv run isort</td>
+<td>python -m isort --sp pyproject.toml --skip .venv .</td>
+</tr>
+</tbody>
+</table>
 </article>
 </div>
 </div>
@@ -275,13 +312,13 @@ pip3 install pipenv</code></p>
               </div>
 </div>
 </a>
-<a class="md-footer-nav__link md-footer-nav__link--next" href="../tests/index.html" rel="next">
+<a class="md-footer-nav__link md-footer-nav__link--next" href="modus_operandi.html" rel="next">
 <div class="md-footer-nav__title">
 <div class="md-ellipsis">
 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Tests Report
+                Modus operandi
               </div>
 </div>
 <div class="md-footer-nav__button md-icon">
